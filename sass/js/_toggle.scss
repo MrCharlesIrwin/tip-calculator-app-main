@@ -1,0 +1,12 @@
+@use "../variables/colors" as *;
+.selected-tip {
+  background-color: $Strong-cyan !important;
+  color: $Very-dark-cyan !important;
+}
+
+.error {
+  outline: 2px solid rgb(255, 4, 4) !important;
+  &:focus {
+    outline: 2px solid rgb(255, 4, 4) !important;
+  }
+}

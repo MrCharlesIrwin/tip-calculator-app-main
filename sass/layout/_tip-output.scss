@@ -1,0 +1,71 @@
+@use "../variables/colors" as *;
+@use "../variables/breakpoints" as *;
+.tip-output {
+  border-radius: 0.9rem;
+  background-color: $Very-dark-cyan;
+  color: white;
+  padding: 1.3rem 2rem 1.5rem;
+
+  button {
+    border-radius: 0.3rem;
+    border: none;
+    background-color: $Strong-cyan;
+    color: $Very-dark-cyan;
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 100%;
+    margin-top: 0.6rem;
+
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+}
+@media (min-width: $mobileToDesktop) {
+  .tip-output {
+    button {
+      margin-top: 11.5rem;
+    }
+  }
+}
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  p {
+    color: $Dark-grayish-cyan;
+    line-height: 1.6;
+
+    em {
+      display: block;
+      color: $White;
+      font-weight: 700;
+      word-spacing: 0.6rem;
+    }
+  }
+}
+
+.outputSum {
+  overflow: scroll;
+  p {
+    max-width: 9rem;
+    color: $Strong-cyan;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    &:before {
+      content: "";
+      mask-image: url("../../images/icon-dollar.svg");
+      background-color: $Strong-cyan;
+      mask-repeat: no-repeat;
+      mask-position: right;
+      mask-size: contain;
+      height: 1.5rem;
+      aspect-ratio: 1;
+    }
+  }
+}

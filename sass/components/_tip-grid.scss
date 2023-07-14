@@ -1,0 +1,48 @@
+@use "../variables/colors" as *;
+@use "../variables/breakpoints" as *;
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 3rem);
+  gap: 1.2rem;
+  .grid-item {
+    border-radius: 0.4rem;
+    background-color: $Very-dark-cyan;
+    color: $Very-light-grayish-cyan;
+    font-size: 1.2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+  @media (min-width: $mobileToDesktop) {
+    .tip-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+  .custom-tip {
+    width: 100%;
+    border: none;
+    background-color: $Grayish-cyan;
+    color: $Very-dark-cyan;
+    text-align: center;
+    &:focus {
+      outline: 2px solid $Strong-cyan;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+}
+@media (min-width: $mobileToDesktop) {
+  .tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 3rem);
+  }
+}

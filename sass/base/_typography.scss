@@ -1,0 +1,6 @@
+@use "../variables/colors" as *;
+h1 {
+    color: $Dark-grayish-cyan;
+    font-size: 1rem;
+    word-spacing: .5rem;
+}

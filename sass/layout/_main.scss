@@ -1,0 +1,27 @@
+@use "../variables/colors" as *;
+@use "../variables/breakpoints" as *;
+.main {
+  margin: auto;
+  margin-bottom: 6rem;
+  border-radius: 1.5rem;
+  width: 375px;
+  background-color: $White;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: $mobileToDesktop) {
+  .main {
+    width: 800px;
+    flex-direction: row;
+    gap: 2rem;
+    .tip-input {
+      width: 50%;
+    }
+    .tip-output {
+      width: 50%;
+    }
+  }
+}

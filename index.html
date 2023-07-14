@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body class="body">
+    <img class="logo" src="images/logo.svg" alt="" />
+
+    <main class="main">
+      <section class="tip-input">
+        <form action="#" class="billInputForm form">
+          <label for="bill">Bill</label>
+          <img
+            class="billInputForm__iconDollar"
+            src="images/icon-dollar.svg"
+            alt=""
+          />
+          <input type="text" placeholder="0" id="bill" />
+        </form>
+
+        <h1>Select Tip %</h1>
+        <div class="tip-grid">
+          <div class="grid-item"><p>5%</p></div>
+          <div class="grid-item"><p>10%</p></div>
+          <div class="grid-item"><p>15%</p></div>
+          <div class="grid-item"><p>25%</p></div>
+          <div class="grid-item"><p>50%</p></div>
+          <input
+            type="text"
+            placeholder="Custom"
+            class="grid-item custom-tip"
+            maxlength="3"
+          />
+        </div>
+
+        <form action="#" class="peopleInputForm form">
+          <label for="people">Number of People</label>
+          <img
+            class="peopleInputForm__iconPerson"
+            src="images/icon-person.svg"
+            alt=""
+          />
+          <input type="text" placeholder="0" id="people" />
+        </form>
+      </section>
+
+      <section class="tip-output">
+        <section class="output">
+          <p><em>Tip Amount</em>/ person</p>
+          <div class="outputSum"><p class="outputPercent">0.00</p></div>
+        </section>
+
+        <section class="output">
+          <p><em>Total</em>/ person</p>
+          <div class="outputSum"><p class="outputBill">0.00</p></div>
+        </section>
+        <button class="resetButton">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>

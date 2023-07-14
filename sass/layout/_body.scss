@@ -1,0 +1,14 @@
+@use "../variables/colors" as *;
+@use "../variables/breakpoints" as *;
+.body {
+  background-color: $Light-grayish-cyan;
+}
+.logo {
+  margin: 3rem auto;
+}
+
+@media (min-width:$mobileToDesktop) {
+  .logo {
+    margin-block:5.5rem;
+  }
+}

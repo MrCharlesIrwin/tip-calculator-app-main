@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  margin: auto;
+  margin-bottom: 6rem;
+  border-radius: 1.5rem;
+  width: 375px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .main {
+    width: 800px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  .main .tip-input {
+    width: 50%;
+  }
+  .main .tip-output {
+    width: 50%;
+  }
+}
+.body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.logo {
+  margin: 3rem auto;
+}
+
+@media (min-width: 800px) {
+  .logo {
+    margin-block: 5.5rem;
+  }
+}
+.tip-output {
+  border-radius: 0.9rem;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 1.3rem 2rem 1.5rem;
+}
+.tip-output button {
+  border-radius: 0.3rem;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 100%;
+  margin-top: 0.6rem;
+}
+.tip-output button:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+@media (min-width: 800px) {
+  .tip-output button {
+    margin-top: 11.5rem;
+  }
+}
+.output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+}
+.output p {
+  color: hsl(186, 14%, 43%);
+  line-height: 1.6;
+}
+.output p em {
+  display: block;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  word-spacing: 0.6rem;
+}
+
+.outputSum {
+  overflow: scroll;
+}
+.outputSum p {
+  max-width: 9rem;
+  color: hsl(172, 67%, 45%);
+  font-size: 2rem;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2rem;
+}
+.outputSum p:before {
+  content: "";
+  -webkit-mask-image: url("../../images/icon-dollar.svg");
+          mask-image: url("../../images/icon-dollar.svg");
+  background-color: hsl(172, 67%, 45%);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: right;
+          mask-position: right;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  height: 1.5rem;
+  aspect-ratio: 1;
+}
+
+h1 {
+  color: hsl(186, 14%, 43%);
+  font-size: 1rem;
+  word-spacing: 0.5rem;
+}
+
+.selected-tip {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+.error {
+  outline: 2px solid rgb(255, 4, 4) !important;
+}
+.error:focus {
+  outline: 2px solid rgb(255, 4, 4) !important;
+}
+
+.form {
+  display: grid;
+  gap: 0.4rem;
+}
+.form label {
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+}
+.form input {
+  border-radius: 0.3rem;
+  border: none;
+  background-color: hsla(184, 14%, 56%, 0.1);
+  height: 2.8rem;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-right: 1rem;
+  color: hsl(186, 14%, 43%);
+  cursor: pointer;
+}
+.form input::-webkit-input-placeholder {
+  opacity: 1;
+}
+.form input::-moz-placeholder {
+  opacity: 1;
+}
+.form input:-ms-input-placeholder {
+  opacity: 1;
+}
+.form input::-ms-input-placeholder {
+  opacity: 1;
+}
+.form input::placeholder {
+  opacity: 1;
+}
+
+.billInputForm {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.billInputForm__iconDollar {
+  position: absolute;
+  top: 2.55rem;
+  left: 1rem;
+  height: 1.2rem;
+  pointer-events: none;
+}
+.billInputForm input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.peopleInputForm {
+  position: relative;
+  margin-block: 2rem 1rem;
+}
+.peopleInputForm__iconPerson {
+  position: absolute;
+  top: 2.65rem;
+  left: 1rem;
+  height: 1.1rem;
+  pointer-events: none;
+}
+.peopleInputForm input:focus {
+  outline: 2px solid hsl(0, 83%, 61%);
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 3rem);
+  gap: 1.2rem;
+}
+.tip-grid .grid-item {
+  border-radius: 0.4rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.tip-grid .grid-item:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+@media (min-width: 800px) {
+  .tip-grid .tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.tip-grid .custom-tip {
+  width: 100%;
+  border: none;
+  background-color: hsla(184, 14%, 56%, 0.1);
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+.tip-grid .custom-tip:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.tip-grid .custom-tip:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.tip-grid .custom-tip:focus::-moz-placeholder {
+  opacity: 0;
+}
+.tip-grid .custom-tip:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.tip-grid .custom-tip:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.tip-grid .custom-tip:focus::placeholder {
+  opacity: 0;
+}
+
+@media (min-width: 800px) {
+  .tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 3rem);
+  }
+}/*# sourceMappingURL=style.css.map */
